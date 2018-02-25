@@ -37,7 +37,7 @@ The Zandercraft Bot is a modified version of WildBeast(which was created by the 
 
 <p align="center">
   <a href="https://github.com/feross/standard"><img src="https://cdn.rawgit.com/feross/standard/master/badge.svg" alt="JavaScript Standard Code Style"></a>
-  <a href="https://discord.gg/7Hjj2Ff"><img src="https://discordapp.com/api/guilds/413897297626267648/widget.png?style=banner2" alt="Discord server"></a>
+  <a href="https://discord.gg/g3sr97K"><img src="https://discordapp.com/api/guilds/413897297626267648/widget.png?style=banner2" alt="Discord server"></a>
 </p>
 
 ---
