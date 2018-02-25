@@ -62,13 +62,13 @@ exports.helpHandle = function (msg, suffix) {
       }
     }
     var misc = [
+      'This bot was developed by the wonderful developer team at http://docs.thesharks.xyz and majorly edited and modified from its original form (WildBeast) by a Discord user by the name of ZandercraftGamesYT his website is at http://www.zandercraft.cf',
       'If you want more information on the commands, check the command reference at http://docs.thesharks.xyz/commands.',
-      'For further questions, join our server: discord.gg/wildbot',
-      'Like what we do? Consider supporting my developer at Patreon! <https://www.patreon.com/Dougley>'
+      'Like what the WildBeast team does? Consider supporting them at Patreon! <https://www.patreon.com/Dougley>'
     ]
     msg.author.openDM().then((y) => {
       if (!msg.isPrivate) {
-        msg.channel.sendMessage('Help is underway ' + msg.author.mention + '!')
+        msg.channel.sendMessage('Help sent! Check your DMs ' + msg.author.mention + '!')
       }
       for (var r in sorts) {
         y.sendMessage(`\`\`\`ini\n${sorts[r].sort().join('\n')}\n\`\`\``) // FIXME: The entire commands array should sort instead of the sorts one
@@ -76,7 +76,7 @@ exports.helpHandle = function (msg, suffix) {
       y.sendMessage(misc.join('\n'))
     }).catch((e) => {
       Logger.error(e)
-      msg.channel.sendMessage('Well, this is awkward, something went wrong while trying to PM you. Do you have them enabled on this server?')
+      msg.channel.sendMessage('Well, this is awkward, something went wrong while trying to DM you. Do you have them enabled on this server?')
     })
   } else if (suffix) {
     if (commands[suffix] || alias[suffix]) {

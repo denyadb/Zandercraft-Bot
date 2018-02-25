@@ -185,7 +185,6 @@ function waiting (vc, msg, bot) {
 function next (msg, suffix, bot) {
   status[msg.guild.id] = false
   let buffer = new stream.Readable()
-  list[msg.guild.id].buffer = buffer
   bot.VoiceConnections
     .map((connection) => {
       if (connection.voiceConnection.guild.id === msg.guild.id) {
@@ -209,95 +208,90 @@ function next (msg, suffix, bot) {
               msg.channel.sendMessage('Playlist has ended! Use `' + prefix + 'request` to add more songs!')
             })
           }
-        } else {
-          if (list[msg.guild.id].link[0] === 'INVALID') {
-            list[msg.guild.id].link.shift()
-            list[msg.guild.id].info.shift()
-            list[msg.guild.id].requester.shift()
-            list[msg.guild.id].skips.count = 0
-            list[msg.guild.id].skips.users = []
-          }
-          var encoder = connection.voiceConnection.createExternalEncoder({
-            type: 'ffmpeg',
-            format: 'pcm',
-            source: '-'
-          })
-          superagent.get(list[msg.guild.id].link[0])
-            .end((err, res) => {
-              if (err) {
-                Logger.error(err)
-                next(msg, suffix, bot)
-              } else {
-                res.on('data', chunk => {
-                  buffer.push(chunk)
-                })
-                res.on('end', () => {
-                  buffer.push(null)
-                })
-              }
-            })
-          setTimeout(function () {
-            buffer.pipe(encoder.stdin)
-            encoder.play()
-            if (list[msg.guild.id] && list[msg.guild.id].volume !== undefined) {
-              connection.voiceConnection.getEncoder().setVolume(list[msg.guild.id].volume)
+        }
+        if (list[msg.guild.id].link[0] === 'INVALID') {
+          list[msg.guild.id].link.shift()
+          list[msg.guild.id].info.shift()
+          list[msg.guild.id].requester.shift()
+          list[msg.guild.id].skips.count = 0
+          list[msg.guild.id].skips.users = []
+        }
+        var encoder = connection.voiceConnection.createExternalEncoder({
+          type: 'ffmpeg',
+          format: 'pcm',
+          source: '-'
+        })
+        superagent.get(list[msg.guild.id].link[0])
+          .end((err, res) => {
+            if (err) {
+              Logger.error(err)
+              next(msg, suffix, bot)
             } else {
-              require('../datacontrol.js').customize.volume(msg).then((v) => {
-                connection.voiceConnection.getEncoder().setVolume(v)
+              res.on('data', chunk => {
+                buffer.push(chunk)
+              })
+              res.on('end', () => {
+                buffer.push(null)
               })
             }
-          }, 2500)
-          encoder.stdin.on('error', () => {
-            // Set the buffer to null to hopefully avoid uhh stuff
-            if (list[msg.guild.id]) {
-              list[msg.guild.id].buffer = null
+          })
+        setTimeout(function () {
+          buffer.pipe(encoder.stdin)
+          encoder.play()
+          if (list[msg.guild.id] && list[msg.guild.id].volume !== undefined) {
+            connection.voiceConnection.getEncoder().setVolume(list[msg.guild.id].volume)
+          } else {
+            require('../datacontrol.js').customize.volume(msg).then((v) => {
+              connection.voiceConnection.getEncoder().setVolume(v)
+            })
+          }
+        }, 2500)
+        encoder.stdin.on('error', () => {
+          // We can ignore this safely.
+        })
+        encoder.once('end', () => {
+          if (list[msg.guild.id].info.length === 0) return
+          msg.channel.sendMessage('**' + list[msg.guild.id].info[0] + '** has ended!').then((m) => {
+            if (Config.settings.autodeletemsg) {
+              setTimeout(() => {
+                m.delete().catch((e) => Logger.error(e))
+              }, Config.settings.deleteTimeout)
             }
           })
-          encoder.once('end', () => {
-            list[msg.guild.id].buffer = null
-            if (list[msg.guild.id].info.length === 0) return
-            msg.channel.sendMessage('**' + list[msg.guild.id].info[0] + '** has ended!').then((m) => {
+          list[msg.guild.id].link.shift()
+          list[msg.guild.id].info.shift()
+          list[msg.guild.id].requester.shift()
+          list[msg.guild.id].skips.count = 0
+          list[msg.guild.id].skips.users = []
+          if (list[msg.guild.id].link.length > 0) {
+            msg.channel.sendMessage('Next up is **' + list[msg.guild.id].info[0] + '** requested by _' + list[msg.guild.id].requester[0] + '_').then((m) => {
               if (Config.settings.autodeletemsg) {
                 setTimeout(() => {
                   m.delete().catch((e) => Logger.error(e))
-                }, Config.settings.deleteTimeout)
+                }, Config.settings.deleteTimeoutLong)
               }
             })
-            list[msg.guild.id].link.shift()
-            list[msg.guild.id].info.shift()
-            list[msg.guild.id].requester.shift()
-            list[msg.guild.id].skips.count = 0
-            list[msg.guild.id].skips.users = []
-            if (list[msg.guild.id].link.length > 0) {
-              msg.channel.sendMessage('Next up is **' + list[msg.guild.id].info[0] + '** requested by _' + list[msg.guild.id].requester[0] + '_').then((m) => {
+            next(msg, suffix, bot)
+          } else {
+            if (Config.settings.leaveAfterEndOfPlaylist) {
+              msg.channel.sendMessage('Playlist has ended, leaving voice.').then((m) => {
                 if (Config.settings.autodeletemsg) {
                   setTimeout(() => {
                     m.delete().catch((e) => Logger.error(e))
-                  }, Config.settings.deleteTimeoutLong)
+                  }, Config.settings.deleteTimeout)
                 }
               })
-              next(msg, suffix, bot)
+              connection.voiceConnection.disconnect()
             } else {
-              if (Config.settings.leaveAfterEndOfPlaylist) {
-                msg.channel.sendMessage('Playlist has ended, leaving voice.').then((m) => {
-                  if (Config.settings.autodeletemsg) {
-                    setTimeout(() => {
-                      m.delete().catch((e) => Logger.error(e))
-                    }, Config.settings.deleteTimeout)
-                  }
-                })
-                connection.voiceConnection.disconnect()
-              } else {
-                var prefix = Config.settings.prefix
-                require('../datacontrol.js').customize.prefix(msg).then((r) => {
-                  if (r !== null) prefix = r
-                  prefix = prefix.replace(regex, '\\$1')
-                  msg.channel.sendMessage('Playlist has ended! Use `' + prefix + 'request` to add more songs!')
-                })
-              }
+              var prefix = Config.settings.prefix
+              require('../datacontrol.js').customize.prefix(msg).then((r) => {
+                if (r !== null) prefix = r
+                prefix = prefix.replace(regex, '\\$1')
+                msg.channel.sendMessage('Playlist has ended! Use `' + prefix + 'request` to add more songs!')
+              })
             }
-          })
-        }
+          }
+        })
       }
     })
   buffer.on('error', () => {
@@ -407,7 +401,6 @@ exports.skip = function (msg, suffix, bot) {
   list[msg.guild.id].requester.shift()
   list[msg.guild.id].skips.count = 0
   list[msg.guild.id].skips.users = []
-  list[msg.guild.id].buffer = null
   next(msg, suffix, bot)
 }
 

@@ -38,13 +38,13 @@ Commands.ping = {
 
 Commands.say = {
   name: 'say',
-  help: 'Repeat after me.',
+  help: 'Repeats what you say.',
   aliases: ['echo', 'repeat'],
   timeout: 10,
   level: 0,
   fn: function (msg, suffix, bot) {
     if (!suffix) {
-      msg.reply('Cannot send an empty message, ya doof.')
+      msg.reply('Cannot send an empty message silly!')
       return
     }
     var re = /(discord(\.gg|app\.com\/invite)\/([\w]{16}|([\w]+-?){3}))/
@@ -63,7 +63,7 @@ Commands.purge = {
   help: 'Use this command to delete any amount of message up to 100.',
   usage: '<number>',
   aliases: ['prune'],
-  noDM: true,
+  noDM: false,
   timeout: 30,
   level: 0,
   fn: function (msg, suffix, bot) {
@@ -280,30 +280,16 @@ Commands.info = {
     msg.channel.sendMessage('', false, {
       color: 0x3498db,
       author: {icon_url: bot.User.avatarURL, name: `${bot.User.username}#${bot.User.discriminator} (${bot.User.id})`},
-      title: `Running on WildBeast version ${require('../../package.json').version}`,
+      title: `Running on version ${require('../../package.json').version}`,
       timestamp: new Date(),
       fields: field,
-      description: '*My developer is Dougley#6248*',
-      url: 'https://github.com/TheSharks/WildBeast',
+      description: '*I was developed by the wonderful team at http://www.thesharks.xyz and heavily customized by ZandercraftGamesYT at http://www.zandercraft.cf*',
+      url: 'https://discordapp.com/oauth2/authorize?&client_id=370241347593961492&scope=bot&permissions=536345655',
       footer: {text: `Online for ${getUptime()}`}
     })
   }
 }
 
-Commands['leave-server'] = {
-  name: 'leave-server',
-  help: 'I\'ll leave this server if I am not welcome here.',
-  noDM: true,
-  level: 3,
-  fn: function (msg) {
-    if (msg.isPrivate) {
-      msg.channel.sendMessage('You can not do this in a DM!')
-    } else {
-      msg.channel.sendMessage('Okay, cya!')
-      msg.guild.leave()
-    }
-  }
-}
 
 Commands.killswitch = {
   name: 'killswitch',
@@ -497,11 +483,11 @@ Commands.setnsfw = {
 
 Commands.hello = {
   name: 'hello',
-  help: 'I\'ll respond to you with hello along with a GitHub link!',
+  help: 'I\'ll respond to you with hello along with a invite link!',
   timeout: 20,
   level: 0,
   fn: function (msg, suffix, bot) {
-    msg.channel.sendMessage('Hi ' + msg.author.username + ', I\'m ' + bot.User.username + ' and I was developed by the team over at TheSharks! Improve me by contributing to my source code on GitHub: https://github.com/TheSharks/WildBeast')
+      msg.channel.sendMessage('Hi ' + msg.author.username + ', I\'m ' + bot.User.username + ' and I was developed by the dev team at http://www.thesharks.xyz and ZandercraftGamesYT at http://www.zandercraft.cf! Invite me with my Oauth2 Link: https://discordapp.com/oauth2/authorize?&client_id=370241347593961492&scope=bot&permissions=536345655')
   }
 }
 
@@ -958,9 +944,9 @@ Commands.prefix = {
     var datacontrol = require('../datacontrol')
     datacontrol.customize.getGuildData(msg).then(g => {
       if (g.customize.prefix) {
-        msg.channel.sendMessage(`My prefix on this server is ${g.customize.prefix}`)
+        msg.channel.sendMessage(`My prefix on this server is ${g.customize.prefix} To set another do ${g.customize.prefix}customize prefix`)
       } else {
-        msg.channel.sendMessage(`My prefix is ${config.settings.prefix}`) // Default prefix, if none is set in customize
+        msg.channel.sendMessage(`My prefix is ${config.settings.prefix} To set another do +customize prefix`) // Default prefix, if none is set in customize
       }
     }).catch((error) => {
       Logger.error(error)
