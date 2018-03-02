@@ -455,7 +455,7 @@ Commands.rankup = {
 
 Commands.setnsfw = {
   name: 'setnsfw',
-  help: 'This changes if the channel allows NSFW commands.',
+  help: 'This changes if the channel allows potentially NSFW commands.',
   noDM: true,
   usage: '<on | off>',
   level: 3,
