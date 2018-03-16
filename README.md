@@ -27,11 +27,9 @@ The Zandercraft Bot is a modified version of WildBeast(which was created by the 
 - Extended server functionality (Welcome messages, server and user info)
 - Role management commands (Manage roles of users, change role color)
 - High level of customization (Changing messages on a per-server basis, permission level system)
-- And more, check the [full command reference](http://docs.thesharks.xyz/commands/) for all the commands!
 
 - [Linux installation guide](http://docs.thesharks.xyz/install_linux/)
 - [Windows installation guide](http://docs.thesharks.xyz/install_windows/)
-- [Docker installation guide](http://docs.thesharks.xyz/install_docker/)
 
 ---
 
