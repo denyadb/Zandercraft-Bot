@@ -3,9 +3,9 @@
 
 <p align="center">
 <a><img src="https://img.shields.io/badge/ZandercraftBotVersion-4.6.0-blue.svg" alt="ZandercraftBotVersion"></a>
+<a><img src="https://img.shields.io/badge/Status-Online-green.svg" alt="Status"></a>
 <a href="http://nodejs.org"><img src="https://img.shields.io/badge/Node.js-9.5.0-green.svg" alt="Node JS"></a>
 <a href="http://npmjs.com"><img src="https://img.shields.io/badge/npm-5.6.0-red.svg" alt="npm"></a>
-<a><img src="https://img.shields.io/badge/Status-Online-green.svg" alt="Status"></a>
 </a>
 </p>
 
@@ -15,7 +15,7 @@
 
 ---
 
-The Zandercraft Bot is a modified version of WildBeast(which was created by the team at http://thesharks.xyz) intended to be able to perform various tasks, ranging from easy server moderation (Kick, ban etc.) to having fun (Cleverbot etc.) in your Discord server. Written in JavaScript, using the [discordie] library.
+The Zandercraft Bot is a modified version of WildBeast(which was created by the team at http://thesharks.xyz) intended to be able to perform various tasks, ranging from easy server moderation (Kick, ban etc.) to having fun in your Discord server. Written in JavaScript, using the [discordie] library.
 
 ## Main features
 
