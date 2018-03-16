@@ -2,9 +2,9 @@
 <img src="https://i.imgur.com/Rak0dam.png"></p>
 
 <p align="center">
-<a href="http://nodejs.org"><img src="https://img.shields.io/badge/Node.js-9.5.0-blue.svg" alt="Node JS"></a>
-<a href="http://npmjs.com"><img src="https://img.shields.io/badge/npm-5.6.0-blue.svg" alt="npm"></a>
-<a><img src="https://img.shields.io/badge/Version-4.6.0-blue.svg" alt="Version"></a>
+<a href="http://nodejs.org"><img src="https://img.shields.io/badge/Node.js-9.5.0-green.svg" alt="Node JS"></a>
+<a href="http://npmjs.com"><img src="https://img.shields.io/badge/npm-5.6.0-red.svg" alt="npm"></a>
+<a><img src="https://img.shields.io/badge/ZandercraftBotVersion-4.6.0-blue.svg" alt="Version"></a>
 </a>
 </p>
 
