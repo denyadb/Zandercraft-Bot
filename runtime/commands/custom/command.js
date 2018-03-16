@@ -60,30 +60,6 @@ Commands.eatpoop = {
   }
 }
 
-Commands.confirm = {
-  name: 'eat',
-  help: 'confirm that you got the message',
-  noDM: true,
-  timeout: 10,
-  overwrite: false,
-  level: 0,
-  fn: function(msg) {
-    msg.channel.sendMessage('By confirming this message, you just helped the Zandercraft Bots development. Thank you so much!')
-  }
-}
-
-Commands.raid = {
-  name: '',
-  help: '',
-  noDM: true,
-  timeout: 10,
-  overwrite: false,
-  level: 4,
-  fn: function(msg) {
-    msg.channel.sendMessage('This command has been patched... Sorry for the inconvenience.')
-  }
-}
-
 Commands.support = {
   name: 'support',
   help: 'I will provide some information on how to get support for the bot.',
