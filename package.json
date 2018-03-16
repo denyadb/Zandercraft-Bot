@@ -1,6 +1,6 @@
 {
-  "private": true,
-  "name": "WildBeast",
+  "private": false,
+  "name": "Zandercraft Bot",
   "version": "4.6.0",
   "description": "A Discord Bot",
   "main": "DougBot.js",
@@ -8,6 +8,10 @@
     {
       "name": "Anthony Zaza",
       "email": "tony@lemonmc.com"
+    }
+    {
+      "name": "Zander",
+      "email": "j3zza45.zz@gmail.com"
     }
   ],
   "scripts": {
