@@ -9,8 +9,8 @@
 </a>
 </p>
 
-| **`Experimental`** | **`Documentation`**|
-|--------------------|--------------------|
+| **`Experimental`** | **`Documentation`**| **`Official Website`**|
+|--------------------|--------------------|--------------------|
 |[![CircleCI](https://circleci.com/gh/TheSharks/WildBeast/tree/master.svg?style=svg)](https://circleci.com/gh/TheSharks/WildBeast/tree/master) | [![CircleCI](https://circleci.com/gh/TheSharks/WildBeast/tree/experimental.svg?style=svg)](https://circleci.com/gh/TheSharks/WildBeast/tree/experimental) | [![CircleCI](https://circleci.com/gh/TheSharks/WildBeastDocs.svg?style=svg)](https://circleci.com/gh/TheSharks/WildBeastDocs)
 
 ---
