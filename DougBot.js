@@ -171,7 +171,7 @@ bot.Dispatcher.on(Event.MESSAGE_CREATE, function (c) {
                         }
                       } else {
                         if (g.customize.nsfw === null || g.customize.nsfw === 'default') {
-                          c.message.channel.sendMessage('This channel does not allow meme commands, enable them first with `allowmemes`')
+                          c.message.channel.sendMessage('This channel does not allow meme commands, enable them first with `+allowmemes`')
                         } else {
                           c.message.channel.sendMessage(g.customize.nsfw.replace(/%user/g, c.message.author.mention).replace(/%server/g, c.message.guild.name).replace(/%channel/, c.message.channel.name))
                         }
