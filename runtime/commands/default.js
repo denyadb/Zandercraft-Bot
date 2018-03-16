@@ -457,12 +457,12 @@ Commands.allowmemes = {
   name: 'allowmemes',
   help: 'This changes if the channel allows the randommeme command.',
   noDM: true,
-  usage: '<on | off>',
+  usage: '<true | false>',
   level: 3,
   fn: function (msg, suffix) {
     var Permissions = require('../databases/controllers/permissions.js')
     if (msg.guild) {
-      if (suffix === 'on' || suffix === 'off') {
+      if (suffix === 'true' || suffix === 'false') {
         Permissions.adjustNSFW(msg, suffix).then((allow) => {
           if (allow) {
             msg.channel.sendMessage('The meme command is now allowed for ' + msg.channel.mention)
