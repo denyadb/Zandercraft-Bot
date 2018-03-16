@@ -144,7 +144,7 @@ exports.adjustNSFW = function (msg, what) {
   return new Promise(function (resolve, reject) {
     /* eslint indent: 0 */
     switch (what) {
-      case 'on':
+      case 'true':
         getDatabaseDocument(msg.guild).then((d) => {
           if (d.perms.nsfw.indexOf(msg.channel.id) > -1) {
             resolve(1)
@@ -159,7 +159,7 @@ exports.adjustNSFW = function (msg, what) {
           }
         }).catch((e) => reject(e))
         break
-      case 'off':
+      case 'false':
         getDatabaseDocument(msg.guild).then((d) => {
           if (d.perms.nsfw.indexOf(msg.channel.id) > -1) {
             d.perms.nsfw.splice(d.perms.nsfw.indexOf(msg.channel.id), 1)

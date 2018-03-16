@@ -473,7 +473,7 @@ Commands.allowmemes = {
           msg.reply('I\'ve failed to set Meme flag!')
         })
       } else {
-        msg.channel.sendMessage('Use either `on` or `off` as suffix!')
+        msg.channel.sendMessage('Use either `true` or `false` as suffix!')
       }
     } else {
       msg.channel.sendMessage('Meme commands are always allowed in DM\'s.')
