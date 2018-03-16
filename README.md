@@ -9,7 +9,7 @@
 </a>
 </p>
 
-| **`Experimental`** | **`Documentation`**| **`Official Website`**|
+| **`Experimental`** | **`Documentation`**| **`Website`**|
 |--------------------|--------------------|--------------------|
 |[![CircleCI](https://circleci.com/gh/TheSharks/WildBeast/tree/master.svg?style=svg)](https://circleci.com/gh/TheSharks/WildBeast/tree/master) | [![CircleCI](https://circleci.com/gh/TheSharks/WildBeast/tree/experimental.svg?style=svg)](https://circleci.com/gh/TheSharks/WildBeast/tree/experimental) | [![Visit](https://i.imgur.com/oGg2eL8.png)](http://www.zandercraft.cf)
 
