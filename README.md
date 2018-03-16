@@ -15,7 +15,7 @@
 
 ---
 
-The Zandercraft Bot is a modified version of WildBeast(which was created by the team at http://thesharks.xyz) intended to be able to perform various tasks, ranging from easy server moderation (Kick, ban etc.) to having fun in your Discord server. Written in JavaScript, using the [discordie] library.
+The Zandercraft Bot is a modified version of WildBeast(which was created by the team at http://thesharks.xyz) intended to be able to perform various tasks, ranging from easy server moderation (Kick, ban etc.) to having fun in your Discord server. Written in JavaScript, using the discordie library.
 
 ## Main features
 
