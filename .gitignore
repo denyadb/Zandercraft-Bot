@@ -1,10 +1,13 @@
+# Logs
+*.log
+npm-debug.log*
+
 # VSCode stuff
 .vscode
 jsconfig.json
 
 # UGC
 config.json
-music
 
 # Runtime data
 pids
@@ -30,3 +33,6 @@ build/Release
 # https://docs.npmjs.com/misc/faq#should-i-check-my-node-modules-folder-into-git
 node_modules
 .idea/
+
+# RethinkDB Database
+rethinkdb_data

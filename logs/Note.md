@@ -1,1 +1,0 @@
-All logs and errors are stored here

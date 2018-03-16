@@ -453,9 +453,9 @@ Commands.rankup = {
   }
 }
 
-Commands.setnsfw = {
-  name: 'setnsfw',
-  help: 'This changes if the channel allows potentially NSFW commands.',
+Commands.allowmemes = {
+  name: 'allowmemes',
+  help: 'This changes if the channel allows the randommeme command.',
   noDM: true,
   usage: '<on | off>',
   level: 3,
@@ -465,18 +465,18 @@ Commands.setnsfw = {
       if (suffix === 'on' || suffix === 'off') {
         Permissions.adjustNSFW(msg, suffix).then((allow) => {
           if (allow) {
-            msg.channel.sendMessage('NSFW commands are now allowed for ' + msg.channel.mention)
+            msg.channel.sendMessage('The meme command is now allowed for ' + msg.channel.mention)
           } else if (!allow) {
-            msg.channel.sendMessage('NSFW commands are now disallowed for ' + msg.channel.mention)
+            msg.channel.sendMessage('The meme command is no longer allowed for ' + msg.channel.mention)
           }
         }).catch(() => {
-          msg.reply('I\'ve failed to set NSFW flag!')
+          msg.reply('I\'ve failed to set Meme flag!')
         })
       } else {
         msg.channel.sendMessage('Use either `on` or `off` as suffix!')
       }
     } else {
-      msg.channel.sendMessage('NSFW commands are always allowed in DM\'s.')
+      msg.channel.sendMessage('Meme commands are always allowed in DM\'s.')
     }
   }
 }
