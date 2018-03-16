@@ -23,6 +23,8 @@ var commands = runtime.commandcontrol.Commands
 var aliases = runtime.commandcontrol.Aliases
 var datacontrol = runtime.datacontrol
 
+Logger.info('Welcome to the Zandercraft Bot terminal! Please give us a second to set things up.')
+
 Logger.info('Initializing...')
 
 if (argv.shardmode && !isNaN(argv.shardid) && !isNaN(argv.shardcount)) {
