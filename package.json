@@ -9,10 +9,6 @@
       "name": "Anthony Zaza",
       "email": "tony@lemonmc.com"
     }
-    {
-      "name": "Zander",
-      "email": "j3zza45.zz@gmail.com"
-    }
   ],
   "scripts": {
     "prestart": "npm update",
