@@ -217,9 +217,9 @@ Commands.twitch = {
             msg.channel.sendMessage('The API returned an unconventional response.')
           }
           if (resp.stream !== null) {
-            msg.channel.sendMessage(suffix + ' is currently live at https://www.twitch.tv/' + suffix)
+            msg.channel.sendMessage(suffix + ' is currently live! :red_circle: Check them out at https://www.twitch.tv/' + suffix)
           } else if (resp.stream === null) {
-            msg.channel.sendMessage(suffix + ' is not currently streaming')
+            msg.channel.sendMessage(suffix + ' is not currently streaming :stop_button: ')
           }
         } else if (!error && response.statusCode === 404) {
           msg.channel.sendMessage('Channel does not exist!')
