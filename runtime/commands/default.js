@@ -230,7 +230,7 @@ Commands.twitch = {
 
 Commands.customize = {
   name: 'customize',
-  help: 'Adjust my behaviour in this server!',
+  help: 'Customize my behaviour in your server. For example, change my prefix',
   noDM: true,
   level: 3,
   fn: function (msg, suffix) {
