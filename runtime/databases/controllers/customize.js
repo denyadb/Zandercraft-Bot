@@ -108,6 +108,7 @@ exports.helpHandle = function (msg) {
   arr.push('`permissions`: Changes my reply when someone tries to use a command they do not have access to')
   arr.push('`welcome`: Changes my welcoming message.')
   arr.push('`welcoming`: Changes wether I should welcome new people.')
+  arr.push('`welcomeChannel`: Changes where I should welcome new people.')
   arr.push('`timeout`: Changes my reply when someones uses a command that is still in cooldown')
   arr.push('`prefix`: Changes the prefix I listen to on this server, mentions will still count as a global prefix')
   arr.push('`volume`: Changes the default volume the bot will assume when joining a voice channel.')
@@ -177,6 +178,17 @@ exports.adjust = function (msg, what, how) {
             resolve(how)
           }).catch((e) => {
             reject(e)
+          })
+          break
+          case 'welcomeChannel':
+            r.db('Discord').table('Guilds').get(msg.guild.id).update({
+              customize: {
+                welcomeChannel: how
+              }
+            }).run().then(() => {
+              resolve(how)
+            }).catch((e) => {
+              reject(e)
           })
           break
         case 'prefix':
