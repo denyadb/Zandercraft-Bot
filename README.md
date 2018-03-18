@@ -35,6 +35,7 @@ The Zandercraft Bot is a modified version of WildBeast(which was created by the 
 
 ## Changelog (As of 4.6.2)
 - Minor changed to the Twitch command.
+- Added welcome channel selection to Customize command
 - Bug fixes
 
 ---
