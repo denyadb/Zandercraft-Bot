@@ -64,7 +64,7 @@ Commands.randomcat = {
   timeout: 10,
   level: 0,
   fn: function (msg) {
-    request.get('http://random.cat/meow')
+    request.get('http://aws.random.cat/meow')
       .end((err, res) => {
         if (!err && res.status === 200) {
           msg.channel.sendMessage(res.body.file)

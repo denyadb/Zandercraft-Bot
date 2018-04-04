@@ -1,7 +1,7 @@
 {
   "private": false,
-  "name": "Zandercraft Bot",
-  "version": "4.6.2",
+  "name": "WildBeast",
+  "version": "4.5.0",
   "description": "A Discord Bot",
   "main": "DougBot.js",
   "maintainers": [
@@ -41,6 +41,7 @@
     "imgflipper": "^1.0.1",
     "leetspeak": "0.0.1",
     "minimist": "^1.2.0",
+    "npm": "^5.8.0",
     "prompt": "^1.0.0",
     "require-directory": "^2.1.1",
     "rethinkdbdash": "^2.3.23",
