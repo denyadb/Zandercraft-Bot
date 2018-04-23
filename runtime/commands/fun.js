@@ -78,7 +78,7 @@ Commands.randomcat = {
 Commands.randomdog = {
   name: 'randomdog',
   help: 'I\'ll get a random doggo image for you!',
-  aliases: ['doggo'],
+  aliases: ['doggo', 'dog', 'rdog', 'rdoggo'],
   module: 'fun',
   timeout: 10,
   level: 0,
@@ -500,6 +500,7 @@ Commands.magic8ball = {
 Commands.randommeme = {
   name: 'randommeme',
   help: 'I\'ll get a random meme for you!',
+  aliases: ['rmeme'],
   level: '0',
   nsfw: true,
   fn: function (msg) {
