@@ -2,23 +2,33 @@
     "docs": [
         {
             "location": "/", 
-            "text": "Welcome to MkDocs\n\n\nFor full documentation visit \nmkdocs.org\n.\n\n\nCommands\n\n\n\n\nmkdocs new [dir-name]\n - Create a new project.\n\n\nmkdocs serve\n - Start the live-reloading docs server.\n\n\nmkdocs build\n - Build the documentation site.\n\n\nmkdocs help\n - Print this help message.\n\n\n\n\nProject layout\n\n\nmkdocs.yml    # The configuration file.\ndocs/\n    index.md  # The documentation homepage.\n    ...       # Other markdown pages, images and other files.", 
+            "text": "Welcome to the Zandercraft Bot Documentation!\n\n\nAbout Zandercraft Bot\n\n\nThe Zandercraft Bot is a Discord bot that was based off of WildBeast (a Discord bot by \nTheSharks\n).  Zandercraft Bot is a chat, productivity, GIFs, and fun bot. It's main feature is it's ability to play XHD (extra HD). This feature is activated using the +voice command followed by +request {song name}. It also has commands like +snack where the bot returns some food emojis which then you can do +eat to pretend to eat them. Since the Zandercraft bot is built for customizability, you are able to set a server specific prefix, custom messages for when someone tries to run a command that they are not allowed to use, a custom welcome message to welcome new members to your server via PMs, and whether or not to allow potentially NSFW memes in specific channels. The Zandercraft Bot is hosted on our servers up here in Canada.\nMake sure to check out our website at \nzandercraft.cf\n for some extra information.\n\n\nAbout Us\n\n\nThe Zandercraft Bot developer team includes \nZander\n, \nShadeyG\n, and \nDragon\n. The Zandercraft Bot dev team invites you all to join \nour official Discord Server\n to ask any questions about the bot, get the latest news about the bot, or to just listen to music, look at memes, or hang out and game with us.\n\n\nFeatures\n\n\n\n\nMusic from YouTube and SoundCloud\n\n\nFunny Insults\n\n\nMeme generator\n\n\nModeration Commands\n\n\nUseful Advice\n\n\nComics\n\n\nWelcome Messages\n\n\nServer Info\n\n\nUser Info\n\n\nRole Management\n\n\nCustomizability\n\n\nCompatible with both Windows and Linux\n\n\n\n\nInvite The Zandercraft Bot To Your Discord Server\n\n\nClick \nhere\n to invite the Zandercraft Bot to your Discord server.", 
             "title": "Home"
         }, 
         {
-            "location": "/#welcome-to-mkdocs", 
-            "text": "For full documentation visit  mkdocs.org .", 
-            "title": "Welcome to MkDocs"
+            "location": "/#welcome-to-the-zandercraft-bot-documentation", 
+            "text": "", 
+            "title": "Welcome to the Zandercraft Bot Documentation!"
         }, 
         {
-            "location": "/#commands", 
-            "text": "mkdocs new [dir-name]  - Create a new project.  mkdocs serve  - Start the live-reloading docs server.  mkdocs build  - Build the documentation site.  mkdocs help  - Print this help message.", 
-            "title": "Commands"
+            "location": "/#about-zandercraft-bot", 
+            "text": "The Zandercraft Bot is a Discord bot that was based off of WildBeast (a Discord bot by  TheSharks ).  Zandercraft Bot is a chat, productivity, GIFs, and fun bot. It's main feature is it's ability to play XHD (extra HD). This feature is activated using the +voice command followed by +request {song name}. It also has commands like +snack where the bot returns some food emojis which then you can do +eat to pretend to eat them. Since the Zandercraft bot is built for customizability, you are able to set a server specific prefix, custom messages for when someone tries to run a command that they are not allowed to use, a custom welcome message to welcome new members to your server via PMs, and whether or not to allow potentially NSFW memes in specific channels. The Zandercraft Bot is hosted on our servers up here in Canada.\nMake sure to check out our website at  zandercraft.cf  for some extra information.", 
+            "title": "About Zandercraft Bot"
         }, 
         {
-            "location": "/#project-layout", 
-            "text": "mkdocs.yml    # The configuration file.\ndocs/\n    index.md  # The documentation homepage.\n    ...       # Other markdown pages, images and other files.", 
-            "title": "Project layout"
+            "location": "/#about-us", 
+            "text": "The Zandercraft Bot developer team includes  Zander ,  ShadeyG , and  Dragon . The Zandercraft Bot dev team invites you all to join  our official Discord Server  to ask any questions about the bot, get the latest news about the bot, or to just listen to music, look at memes, or hang out and game with us.", 
+            "title": "About Us"
+        }, 
+        {
+            "location": "/#features", 
+            "text": "Music from YouTube and SoundCloud  Funny Insults  Meme generator  Moderation Commands  Useful Advice  Comics  Welcome Messages  Server Info  User Info  Role Management  Customizability  Compatible with both Windows and Linux", 
+            "title": "Features"
+        }, 
+        {
+            "location": "/#invite-the-zandercraft-bot-to-your-discord-server", 
+            "text": "Click  here  to invite the Zandercraft Bot to your Discord server.", 
+            "title": "Invite The Zandercraft Bot To Your Discord Server"
         }
     ]
 }
