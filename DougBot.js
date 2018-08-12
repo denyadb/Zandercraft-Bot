@@ -24,8 +24,10 @@ var aliases = runtime.commandcontrol.Aliases
 var datacontrol = runtime.datacontrol
 
 Logger.info('Welcome to the Zandercraft Bot terminal! Please give us a second to set things up.')
+setTimeout(function(){
+  Logger.info('Initializing...')
 
-Logger.info('Initializing...')
+}, 5000);
 
 if (argv.shardmode && !isNaN(argv.shardid) && !isNaN(argv.shardcount)) {
   Logger.info('Starting in ShardMode, this is shard ' + argv.shardid, {
@@ -50,7 +52,8 @@ bot.Dispatcher.on(Event.GATEWAY_READY, function () {
     if (err) {
       Logger.error('Version check failed, ' + err)
     } else if (res) {
-      Logger.info(`Version check: ${res}`)
+      // Logger.info(`Version check: ${res}`) -old version check. - now seperate from wildbeast
+      Logger.info(`You are running the official Zandercraft Bot package. Version: 4.6.2 - Check GitHub to see if you are running the latest version!`)
     }
   })
   Logger.info('Ready to start!', {
@@ -59,7 +62,7 @@ bot.Dispatcher.on(Event.GATEWAY_READY, function () {
   })
   Logger.info(`Logged in as ${bot.User.username}#${bot.User.discriminator} (ID: ${bot.User.id}) and serving ${bot.Users.length} users in ${bot.Guilds.length} servers.`)
   if (argv.shutdownwhenready) {
-    console.log('o okei bai')
+    console.log('Oh... OK... Fine.')
     process.exit(0)
   }
 })
