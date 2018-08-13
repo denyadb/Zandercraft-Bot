@@ -667,7 +667,7 @@ Commands['join-server'] = {
   level: 0,
   fn: function (msg, suffix, bot) {
     if (bot.User.bot) {
-      msg.channel.sendMessage('Sorry, bot accounts can\'t accept instant invites, instead, use my OAuth URL: <' + config.bot.oauth + '>')
+      msg.channel.sendMessage('To invite me to your server go to <' + config.bot.oauth + '>')
     } else {
       Logger.warn('Using user accounts is deprecated!')
     }
