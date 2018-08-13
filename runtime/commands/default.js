@@ -963,7 +963,7 @@ Commands.support = {
   overwrite: false,
   level: 0,
   fn: function(msg) {
-    msg.channel.sendMessage('Our bot is having fatal errors! It is very important that you join our Official Support Server and follow all of the instructions there!: https://discord.gg/7Hjj2Ff')
+    msg.channel.sendMessage('You can join the Zandercraft Bot Official Support server here: https://discord.gg/7Hjj2Ff')
   }
 }
 
