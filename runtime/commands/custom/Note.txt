@@ -1,1 +1,1 @@
-You can put your own command.js file into this directory!
+You can put your own custom commands in the command.js file in this directory. For more information on custom commands, see https://docs.zandercraft.cf

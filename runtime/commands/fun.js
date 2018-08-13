@@ -24,6 +24,54 @@ Commands.gif = {
   }
 }
 
+Commands.poop = {
+  name: 'poop',
+  help: 'You just pooped... Bruh.',
+  noDM: true,
+  timeout: 10,
+  overwrite: false,
+  level: 0,
+  fn: function(msg) {
+    msg.channel.sendMessage('Ewwwwwww... You just pooped :poop:... Bruh.')
+  }
+}
+
+Commands.eatpoop = {
+  name: 'eatpoop',
+  help: 'Eat your poop. Why? Just Why? __**Only do after using the +poop command.**__',
+  noDM: true,
+  timeout: 10,
+  overwrite: false,
+  level: 0,
+  fn: function(msg) {
+    msg.channel.sendMessage('You just ate your poop! :poop: What the heck is wrong wth you?!')
+  }
+}
+
+Commands.snacks = {
+  name: 'snacks',
+  help: 'I will give you some snacks.',
+  noDM: true,
+  timeout: 10,
+  overwrite: false,
+  level: 0,
+  fn: function(msg) {
+    msg.channel.sendMessage('Here are some snacks! :cookie: :pizza: :fries: Use `+eat` to eat them! Enjoy!')
+  }
+}
+
+Commands.eat = {
+  name: 'eat',
+  help: 'Eat the snacks that I give you. __**Only use after using the +snacks command.**__',
+  noDM: true,
+  timeout: 10,
+  overwrite: false,
+  level: 0,
+  fn: function(msg) {
+    msg.channel.sendMessage('You just ate the snacks I gave you. I hope that they were yummy! :yum:')
+  }
+}
+
 Commands.rip = {
   name: 'rip',
   help: 'Posts a ripme.xyz link',

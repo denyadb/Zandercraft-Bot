@@ -955,6 +955,30 @@ Commands.prefix = {
   }
 }
 
+Commands.support = {
+  name: 'support',
+  help: 'I will provide some information on how to get support for the bot.',
+  noDM: false,
+  timeout: 10,
+  overwrite: false,
+  level: 0,
+  fn: function(msg) {
+    msg.channel.sendMessage('Our bot is having fatal errors! It is very important that you join our Official Support Server and follow all of the instructions there!: https://discord.gg/7Hjj2Ff')
+  }
+}
+
+Commands.youtube = {
+  name: 'youtube',
+  help: 'I will desplay Zanders youtube link.',
+  noDM: true,
+  timeout: 10,
+  overwrite: false,
+  level: 0,
+  fn: function(msg) {
+    msg.channel.sendMessage('Check out Zanders youtube channel at https://www.youtube.com/channel/UC8eOTMZycMZL4NJDCk8jwxw')
+  }
+}
+
 Commands.colorrole = {
   name: 'colorrole',
   help: 'Use this to color a role you have!',
