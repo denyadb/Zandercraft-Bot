@@ -12,7 +12,7 @@
 
 | **`Master Branch`** | **`Documentation`**| **`Website`**|
 |--------------------|--------------------|--------------------|
-|[![CircleCI](https://img.shields.io/badge/master-Passing-green.svg)](https://img.shields.io/badge/Docs-In_Progress-orange.svg) | [![CircleCI](https://circleci.com/gh/TheSharks/WildBeast/tree/experimental.svg?style=svg)](https://circleci.com/gh/TheSharks/WildBeast/tree/experimental) | [![Visit](https://i.imgur.com/oGg2eL8.png)](http://www.zandercraft.cf)
+|[![CircleCI](https://img.shields.io/badge/master-Passing-green.svg)](https://docs.zandercraft.cf) | [![CircleCI](https://img.shields.io/badge/Docs-In_Progress-orange.svg)](https://docs.zandercraft.cf) | [![Visit](https://i.imgur.com/oGg2eL8.png)](http://www.zandercraft.cf)
 
 ---
 
