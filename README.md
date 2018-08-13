@@ -4,15 +4,15 @@
 <p align="center">
 <a><img src="https://img.shields.io/badge/ZandercraftBotVersion-4.6.2-blue.svg" alt="ZandercraftBotVersion"></a>
 <a><img src="https://img.shields.io/badge/Status-Online-green.svg" alt="Status"></a>
-<a href="http://nodejs.org"><img src="https://img.shields.io/badge/Node.js-9.5.0-green.svg" alt="Node JS"></a>
-<a href="http://npmjs.com"><img src="https://img.shields.io/badge/npm-5.6.0-red.svg" alt="npm"></a>
+<a href="http://nodejs.org"><img src="https://img.shields.io/badge/Node.js-6.14.3-green.svg" alt="Node JS"></a>
+<a href="http://npmjs.com"><img src="https://img.shields.io/badge/npm-3.10.10-red.svg" alt="npm"></a>
 <a><img src="https://img.shields.io/badge/WildBeastVersion-4.5.0-blue.svg" alt="WildbeastVersion"></a>
 </a>
 </p>
 
-| **`Experimental`** | **`Documentation`**| **`Website`**|
+| **`Master Branch`** | **`Documentation`**| **`Website`**|
 |--------------------|--------------------|--------------------|
-|[![CircleCI](https://circleci.com/gh/TheSharks/WildBeast/tree/master.svg?style=svg)](https://circleci.com/gh/TheSharks/WildBeast/tree/master) | [![CircleCI](https://circleci.com/gh/TheSharks/WildBeast/tree/experimental.svg?style=svg)](https://circleci.com/gh/TheSharks/WildBeast/tree/experimental) | [![Visit](https://i.imgur.com/oGg2eL8.png)](http://www.zandercraft.cf)
+|[![CircleCI](https://img.shields.io/badge/master-Passing-green.svg)](https://img.shields.io/badge/Docs-In_Progress-orange.svg) | [![CircleCI](https://circleci.com/gh/TheSharks/WildBeast/tree/experimental.svg?style=svg)](https://circleci.com/gh/TheSharks/WildBeast/tree/experimental) | [![Visit](https://i.imgur.com/oGg2eL8.png)](http://www.zandercraft.cf)
 
 ---
 
