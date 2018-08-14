@@ -130,7 +130,7 @@ exports.join = function (msg, suffix, bot) {
         })
       }
     } else {
-      msg.reply('I am already playing something on this server in channel **' + voiceCheck.voiceConnection.channel.name + '**').then((m) => {
+      msg.reply('I am already streaming on this server in channel **' + voiceCheck.voiceConnection.channel.name + '**').then((m) => {
         if (Config.settings.autodeletemsg) {
           setTimeout(() => {
             m.delete().catch((e) => Logger.error(e))
