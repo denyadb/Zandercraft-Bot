@@ -1,44 +1,34 @@
-version: '2'
-
+version: '3'
 services:
-  rethinkdb:
-    restart: always
-    image: rethinkdb:latest
-    container_name: wildbeast-rethink
+  wildbeast:
+    image: dougley/wildbeast
     volumes:
-    # replace "/home" with any path that you want to store your rethinkdb database files
-    - /home:/data
-
-  wild-beast:
-    restart: always
-    image: dougley/wildbeast:latest
-    container_name: wildbeast
+      - ./src:/opt/wildbeast/src
+      - ./index.js:/opt/wildbeast/index.js
+    env_file:
+      - .env
+    links:
+    - arango
+    - lavalink
     depends_on:
-    - rethinkdb
+      - arango
+      - lavalink
+      - install
+  arango:
+    image: arangodb:3.3.14
+    env_file:
+      - arangodb.env
+  install:
+    restart: 'no'
+    links:
+      - arango
     environment:
-    - BOT_ISBOT=true
-    - BOT_TOKEN=DISCORD_BOT_TOKEN
-    - BOT_EMAIL=email
-    - BOT_PASSWORD=password
-    - BOT_OAUTH=https://discordapp.com/oauth2/authorize?&client_id=CLIENT_ID&scope=bot
-
-    - DATABASE_HOST=rethinkdb
-    - DATABASE_PORT=28015
-    - DATABASE_PASSWORD=
-    - DATABASE_USER=admin
-
-    - SETTINGS_PREFIX=++
-    - SETTINGS_AUTODELETEMSG=true
-    - SETTINGS_DELETE_TIMEOUT=3000
-    - SETTINGS_DELETE_TIMEOUT_LONG=6000
-    - SETTINGS_MAXVCSLOTS=10
-
-    - PERMISSIONS_MASTER=split,with,comma
-    - PERMISSIONS_LEVEL1=
-    - PERMISSIONS_LEVEL2=
-    - PERMISSIONS_LEVEL3=
-
-    - API_KEYS_IMGFLIP_USERNAME=IMGFLIP_USERNAME
-    - API_KEYS_IMGFLIP_PASSWORD=IMGFLIP_PASSWORD
-    - API_KEYS_GOOGLE=GOOGLE_KEY
-    - API_KEYS_TWITCH_ID=TWITCH_ID
+      ARANGO_URI: http://arango:8529
+    image: dougley/wildbeast
+    depends_on:
+      - arango
+    command: npm run-script dbcreate
+  lavalink:
+    image: fredboat/lavalink:v3
+    env_file:
+      - lavalink.env

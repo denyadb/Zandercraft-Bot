@@ -1,3 +1,67 @@
+# 6.0.0
+## Release phase
+### 6.1.1
+Stylistic changes    
+Corrected documentation on decoupling to correctly expose both ports of Lavalink. Internal changes to reduce the quirks with this process    
+Updated `docker-compose.yml` to allow updating of the WildBeast source code without decoupling
+Added `restPort` property to Lavalink node configuration
+Upgraded Lavalink to v3 and ArangoDB to 3.3.14
+
+### 6.1.0
+Removed translation submodule, we now include the standard file by default. Translations are able to be downloaded from our crowdin project     
+CircleCI will now automatically include translations into new Docker images   
+For Docker images, uws is locked to v10.148.1    
+Commands that call external APIs will now indicate errors    
+Music command have been updated to support lavalink v3   
+Added optional embedded database powered by LokiJS   
+Added new ffmpeg based voice encoder     
+`++meme` will no longer use imgflip, memegen is used instead   
+`++settings` will error out if an unknown language is being set    
+Encoders and drivers are loaded on-demand instead of requiring them all   
+Elasticsearch logging will now log command arguments instead of the full message    
+Version checking will check for git commits instead of versions only, this falls back to original version check if git is not available    
+
+### 6.0.0
+**This is a breaking release, nothing is backwards compatible.**
+
+Entire internal structure changed.   
+We no longer officially support RethinkDB as a database, the official database is ArangoDB.   
+Command indexing changed, each command lives in its own file now.   
+Changed Discord library from Discordie to Eris (rip)   
+All event handlers live in separate files instead of all being defined in the main script.   
+**BREAKING CHANGE**: All configuration is now declared in the environment, `.env` files are supported. env vars are explained below:
+
+| Variable | Required | Function |
+|----------|----------|----------|
+| `BOT_TOKEN` | **Mandatory** | The token to use |
+| `BOT_PREFIX` | **Mandatory** | The prefix to use |
+| `WILDBEAST_MASTERS` | **Mandatory** | String of user IDs separated by pipe characters that should be considered master users |
+| `WILDBEAST_LANGUAGE` | Optional | Set default language to use |
+| `WILDBEAST_SUPPRESS_COMMANDLOG` | Optional | If set, suppresses loglevel `CMD` |
+| `WILDBEAST_PREFERRED_DATABASE` | Optional | Override the database driver used, defaults to `arangodb` |
+| `WILDBEAST_PREFERRED_ENDCODER` | Optional | Override default encoder | 
+| `WILDBEAST_VOICE_PERSIST` | Optional | Override default behaviour of leaving voice channels when playlists are done |
+| `WILDBEAST_DISABLE_MUSIC` | Optional | If set, prevent any encoder from being loaded |
+| `BEZERK_URI` | Optional | URI of Bezerk server |
+| `BEZERK_PASSWORD` | Optional | Password for Bezerk server |
+| `ELASTICSEARCH_URI` | Optional | If set, configure logging to log to Elasticsearch |
+| `ELASTICSEARCH_INDEX` | Optional | Override default index of `wildbeast` for Elasticsearch logging |
+| `SENTRY_DSN` | Optional | If set, configure error logging to report to Sentry as well |
+| `ARANGO_URI` | Optional | If set, override the default Arango URI of `http://localhost:8529` |
+| `ARANGO_USERNAME` | Required if running default | Set the username used for authenticating with Arango |
+| `ARANGO_PASSWORD` | Required if running default | Set the password used for authenticating with Arango |
+| `ARANGO_DATABASE` | Optional | If set, override the default database used, defaults to `wildbeast` |
+| `NODE_ENV` | Optional | If set to `debug`, enable verbose logging |
+| `IMGFLIP_USERNAME` | Optional | Set username to use with Imgflip | 
+| `IMGFLIP_PASSWORD` | Optional | Set Imgflip password |
+| `IMGUR_KEY` | Optional | Set Imgur key |
+| `TWITCH_ID` | Optional | Set Twitch client ID |
+| `LAVA_NODES` | Required | JSON string containing Lavalink node information |
+| `RANCHER_AUTOSCALE` | Optional | If set, enable additional features exclusive to Rancher orchestrated environments |
+ 
+# 5.0.0
+Skipped, this was developed internally but never released or finished.
+
 # 4.0.0
 ## Release phase
 
