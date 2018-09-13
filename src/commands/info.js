@@ -14,16 +14,16 @@ module.exports = {
       {name: 'Users Known', value: '```\n' + bot.users.size + '```', inline: true},
       {name: 'Channels Connected', value: '```\n' + Object.keys(bot.channelGuildMap).length + '```', inline: true},
       {name: 'Private Channels', value: '```\n' + Object.keys(bot.privateChannelMap).length + '```', inline: true},
-      {name: 'Owner', value: '```\n' + owner + '```', inline: true}
+        { name: 'Owner', value: '```\n' + "ZandercraftGamesYT#7079" + '```', inline: true}
     ]
     if (msg.channel.guild) fields.push({name: 'Shard ID', value: '```\n' + `${msg.channel.guild.shard.id}` + '```', inline: true})
     msg.channel.createMessage({embed: {
       color: 0x3498db,
       author: {icon_url: bot.user.avatarURL, name: `${bot.user.username}#${bot.user.discriminator} (${bot.user.id})`},
-      title: `Running on WildBeast version ${require('../../package.json').version}`,
+      title: `Running on version ${require('../../package.json').version}`,
       timestamp: new Date(),
       fields: fields,
-      url: 'https://github.com/TheSharks/WildBeast',
+      url: 'https://github.com/Zandercraft/Zandercraft-Bot',
       footer: {text: `Started ${require('moment')(Date.now() - (Math.floor(process.uptime()) * 1000)).fromNow()}`}
     }})
   }
