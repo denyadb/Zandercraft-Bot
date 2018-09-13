@@ -51,6 +51,8 @@ The Zandercraft Bot is a modified version of WildBeast(which was created by the 
 - Encoders and drivers are loaded on-demand instead of requiring them all
 - Elasticsearch logging will now log command arguments instead of the full message
 - Version checking will check for git commits instead of versions only, this falls back to original version check if git is not available.
+- Stylistic changes
+- Updated docker-compose.yml to allow updating of the source code without decoupling Added restPort property to Lavalink node configuration Upgraded Lavalink to v3 and ArangoDB to 3.3.14
 
 ---
 
