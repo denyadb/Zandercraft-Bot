@@ -50,7 +50,7 @@ The Zandercraft Bot is a modified version of WildBeast(which was created by the 
 - +settings will error out if an unknown language is being set
 - Encoders and drivers are loaded on-demand instead of requiring them all
 - Elasticsearch logging will now log command arguments instead of the full message
-- Version checking will check for git commits instead of versions only, this falls back to original version check if git is not available
+- Version checking will check for git commits instead of versions only, this falls back to original version check if git is not available.
 
 ---
 
