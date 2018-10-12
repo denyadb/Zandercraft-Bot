@@ -5,7 +5,9 @@ global.i18n = require('./src/internal/i18n')
 require('./src/internal/secrets-loader')
 require('./src/internal/check-env')
 
+global.logger.log('Welcome to the Zandercraft Bot!')
 global.logger.log('Beginning startup sequence...')
+global.logger.log('This may take a while.')
 
 require('./src/internal/version-check')
 

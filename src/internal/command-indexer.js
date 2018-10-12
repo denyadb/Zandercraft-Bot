@@ -1,9 +1,9 @@
 const commands = require('./directory-loader')('../commands')
 
 const misc = [
-  'This bot was developed by the wonderful developer team at <http://docs.thesharks.xyz/> and majorly edited and modified from its original form (WildBeast) by a Discord user by the name of ZandercraftGamesYT his website is at http://www.zandercraft.cf/',
-  'If you want more information on the commands, check the command reference at http://docs.zandercraft.cf',
-  'Like what the WildBeast team does? Consider supporting them at Patreon! <https://www.patreon.com/Dougley>' // escaping embed because we're not evil
+  'If you want more information on the commands, check the command reference at http://docs.thesharks.xyz/commands.',
+  'For further questions, join our server: discord.gg/wildbot',
+  'Like what we do? Consider supporting my developer at Patreon! <https://www.patreon.com/Dougley>' // escaping embed because we're not evil
 ]
 
 let result = {}
