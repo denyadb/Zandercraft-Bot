@@ -1,4 +1,4 @@
-module.exports = {
+Nomodule.exports = {
   meta: {
     help: 'Get information about this bot.',
     module: 'Util',
@@ -20,10 +20,10 @@ module.exports = {
     msg.channel.createMessage({ embed: {
       color: 0x3498db,
       author: { icon_url: bot.user.avatarURL, name: `${bot.user.username}#${bot.user.discriminator} (${bot.user.id})` },
-      title: `Running on Zandercraft Bot version 6.0.1`,
+      title: `Running on WildBeast version ${require('../../package.json').version}`,
       timestamp: new Date(),
       fields: fields,
-      url: 'https://github.com/Zandercraft/Zandercraft-Bot',
+      url: 'https://github.com/TheSharks/WildBeast',
       footer: { text: `Started ${require('moment')(Date.now() - (Math.floor(process.uptime()) * 1000)).fromNow()}` }
     } })
   }
