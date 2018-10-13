@@ -1,4 +1,4 @@
-Nomodule.exports = {
+module.exports = {
   meta: {
     help: 'Get information about this bot.',
     module: 'Util',
