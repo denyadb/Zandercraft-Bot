@@ -14,10 +14,11 @@ RUN mkdir /opt/wildbeast && chown wildbeast /opt/wildbeast -R
 # Copy files and install modules
 COPY . /opt/wildbeast
 WORKDIR /opt/wildbeast
+RUN npm install pm2 -g
 RUN npm i --production
 # Install optional native modules
 RUN npm i zlib-sync uws@10.148.1 https://github.com/discordapp/erlpack.git bufferutil sodium-native node-opus
 
 # Switch to wildbeast user and run entrypoint
 USER wildbeast
-CMD ["node", "index.js"]
+CMD ["pm2-runtime", "index.js"]
