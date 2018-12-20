@@ -9,7 +9,7 @@ module.exports = {
   fn: async (msg) => {
     let bot = global.bot
     let user = await bot.getRESTUser('107904023901777920')
-    let owner = `ZandercraftGamesYT`
+    let owner = `ZandercraftGamesYT#7079`
     let fields = [{ name: 'Servers Connected', value: '```\n' + bot.guilds.size + '```', inline: true },
       { name: 'Users Known', value: '```\n' + bot.users.size + '```', inline: true },
       { name: 'Channels Connected', value: '```\n' + Object.keys(bot.channelGuildMap).length + '```', inline: true },
@@ -20,7 +20,7 @@ module.exports = {
     msg.channel.createMessage({ embed: {
       color: 0x3498db,
       author: { icon_url: bot.user.avatarURL, name: `${bot.user.username}#${bot.user.discriminator} (${bot.user.id})` },
-      title: `Running on WildBeast version ${require('../../package.json').version}`,
+      title: `Running on Zandercraft Bot version ${require('../../package.json').version}`,
       timestamp: new Date(),
       fields: fields,
       url: 'https://github.com/TheSharks/WildBeast',
