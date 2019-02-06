@@ -3,7 +3,7 @@ const commands = require('./directory-loader')('../commands')
 const misc = [
   'The Zandercraft Bot was originally coded by Dougley and the team at <TheSharks.xyz>. It is now hosted and developed by Zander as a fork of WildBeast.',
   'If you want more information on the commands, check the command reference at https://docs.zandercraft.cf/commands/commandlist/.',
-  'For further questions, join our Discord support server at: <http://discord.io/ZandercraftBot>'
+  'For further questions, join our Discord support server at: <http://discord.io/ZandercraftBot>',
   'Like what the dev team at TheSharks does? Consider supporting them on Patreon! <https://www.patreon.com/Dougley>'
 ]
 
