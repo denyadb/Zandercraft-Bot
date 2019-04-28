@@ -7,7 +7,7 @@
 <a href="http://nodejs.org"><img src="https://img.shields.io/badge/Node.js-10.9.0-green.svg" alt="Node JS"></a>
 <a href="http://npmjs.com"><img src="https://img.shields.io/badge/npm-6.2.0-red.svg" alt="npm"></a>
 <a><img src="https://img.shields.io/badge/WildBeastVersion-6.1.1-blue.svg" alt="WildbeastVersion"></a>
-</a>
+<a><img src="https://img.shields.io/discord/413897297626267648.svg?style=for-the-badge" alt="Discord Server"></a>
 </p>
 
 | **`Master Branch`** | **`Documentation`**| **`Website`**|
