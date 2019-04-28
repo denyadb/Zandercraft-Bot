@@ -8,7 +8,7 @@ module.exports = {
   },
   fn: async (msg) => {
     let bot = global.bot
-    let user = await bot.getRESTUser('107904023901777920')
+    // let user = await bot.getRESTUser('107904023901777920') --deprecated. Removed to fix error.
     let owner = `ZandercraftGamesYT#7079`
     let fields = [{ name: 'Servers Connected', value: '```\n' + bot.guilds.size + '```', inline: true },
       { name: 'Users Known', value: '```\n' + bot.users.size + '```', inline: true },
