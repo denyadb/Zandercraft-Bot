@@ -2,10 +2,10 @@
 <img src="https://i.imgur.com/Rak0dam.png"></p>
 
 <p align="center">
-<a><img src="https://img.shields.io/github/release/Zandercraft/Zandercraft-Bot.svg?label=Latest%20Release&logo=Github&style=for-the-badge" alt="ZandercraftBotVersion"></a>
+<a><img src="https://img.shields.io/github/release/Zandercraft/Zandercraft-Bot.svg?label=Latest%20Release&logo=Github&style=for-the-badge" alt="LatestRelease"></a>
 <a href="http://nodejs.org"><img src="https://img.shields.io/badge/Node.js-10.9.0-green.svg?style=for-the-badge" alt="Node JS"></a>
 <a href="http://npmjs.com"><img src="https://img.shields.io/badge/npm-6.2.0-red.svg?style=for-the-badge" alt="npm"></a>
-<a><img src="https://img.shields.io/badge/WildBeastVersion-6.1.1-blue.svg?style=for-the-badge" alt="WildbeastVersion"></a>
+<a><img src="https://img.shields.io/badge/WildBeastVersion-6.2.0-blue.svg?style=for-the-badge" alt="WildbeastVersion"></a>
 <a href="https://discord.io/zandercraftbot"><img src="https://img.shields.io/discord/413897297626267648.svg?label=Discord&logo=Discord&style=for-the-badge" alt="Discord Server"></a>
 </p>
 
