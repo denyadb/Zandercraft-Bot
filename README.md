@@ -32,26 +32,14 @@ The Zandercraft Bot is a modified version of WildBeast(which was created by the 
 - [Linux installation guide](http://docs.thesharks.xyz/install_linux/)
 - [Windows installation guide](http://docs.thesharks.xyz/install_windows/)
 
-## Changelog (As of 6.0.1)
-- Entire internal structure changed.
-- Bot no longer officially support RethinkDB as a database, the official database is ArangoDB.
-- Command indexing changed, each command lives in its own file now.
-- Changed Discord library from Discordie to Eris (rip)
-- All event handlers live in separate files instead of all being defined in the main script.
-- Removed translation submodule, we now include the standard file by default.
-- CircleCI will now automatically include translations into new Docker images
-- For Docker images, uws is locked to v10.148.1
-- Commands that call external APIs will now indicate errors
-- Music command have been updated to support lavalink v3
-- Added optional embedded database powered by LokiJS
-- Added new ffmpeg based voice encoder
-- +meme will no longer use imgflip, memegen is used instead
-- +settings will error out if an unknown language is being set
-- Encoders and drivers are loaded on-demand instead of requiring them all
-- Elasticsearch logging will now log command arguments instead of the full message
-- Version checking will check for git commits instead of versions only, this falls back to original version check if git is not available.
-- Stylistic changes
-- Updated docker-compose.yml to allow updating of the source code without decoupling Added restPort property to Lavalink node configuration Upgraded Lavalink to v3 and ArangoDB to 3.3.14
+## Changelog (As of 6.3.0)
+- Urban Dictionary command disabled due to causing crashes
+- Cleverbot command in the works (is being added back in)
+- Lots of dependancy version updates/bumps
+- Support command added back
+- Lavalink updated
+- Lavalink errors fixed
+- And more!
 
 ---
 
