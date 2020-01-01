@@ -23,7 +23,7 @@ module.exports = {
       title: `Running on Zandercraft Bot version 6.1.0`,
       timestamp: new Date(),
       fields: fields,
-      url: 'https://github.com/TheSharks/WildBeast',
+      url: 'https://github.com/Zandercraft/Zandercraft-Bot',
       footer: { text: `Started ${require('moment')(Date.now() - (Math.floor(process.uptime()) * 1000)).fromNow()}` }
     } })
   }
