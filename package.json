@@ -22,7 +22,7 @@
   "author": "Zander <j3zza45.zz@gmail.com>",
   "contributors": [
     "Remco Jongschaap <hello@dougley.com>",
-	"Anthony Zaza <tony@lemonmc.com>",
+    "Anthony Zaza <tony@lemonmc.com>",
     "Curtis Fowler <caf203@gmail.com>",
     "Linus Willner <hello@linuswillner.me>"
   ],
@@ -48,6 +48,7 @@
     "cleverbot.io": "^1.0.4",
     "dotenv": "^6.2.0",
     "eris": "^0.11.0",
+    "eris-sharder": "^1.9.0",
     "moment": "^2.24.0",
     "superagent": "^5.0.5",
     "ws": "^7.2.0"

@@ -13,7 +13,7 @@ module.exports = {
     let fields = [{ name: 'Servers Connected', value: '```\n' + bot.guilds.size + '```', inline: true },
       { name: 'Users Known', value: '```\n' + bot.users.size + '```', inline: true },
       { name: 'Channels Connected', value: '```\n' + Object.keys(bot.channelGuildMap).length + '```', inline: true },
-      { name: 'Private Channels', value: '```\n' + Object.keys(bot.privateChannelMap).length + '```', inline: true },
+      { name: 'Verified', value: '```\n' + "Yes" + '```', inline: true },
       { name: 'Owner', value: '```\n' + owner + '```', inline: true }
     ]
     if (msg.channel.guild) fields.push({ name: 'Shard ID', value: '```\n' + `${msg.channel.guild.shard.id}` + '```', inline: true })
@@ -24,7 +24,7 @@ module.exports = {
       timestamp: new Date(),
       fields: fields,
       url: 'https://github.com/Zandercraft/Zandercraft-Bot',
-      footer: { text: `Started ${require('moment')(Date.now() - (Math.floor(process.uptime()) * 1000)).fromNow()}` }
+      footer: { text: `Uptime: ${require('moment')(Date.now() - (Math.floor(process.uptime()) * 1000)).fromNow()}` }
     } })
   }
 }

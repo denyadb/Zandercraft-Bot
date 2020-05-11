@@ -4,7 +4,7 @@ module.exports = {
     usage: '<name>',
     module: 'Fun',
     level: 0,
-    timeout: 5,
+    timeout: 5
   },
   fn: function (msg, suffix) {
     msg.channel.createMessage('Here are some snacks! :cookie: :pizza: :fries: Use `+eat` to eat them! Enjoy!')

@@ -41,7 +41,7 @@ require('./src/internal/k8s-autoscale').then(x => {
   })
 
   if (process.env.HOTSHOTS_HOST) {
-      global.logger.warn("Using Dogstats in this way is deprecated, it's recommended to switch to a different stats aggregator.")
+    global.logger.warn("Using Dogstats in this way is deprecated, it's recommended to switch to a different stats aggregator.")
     setInterval(() => dogstats.statsHook(bot), 1000)
   }
 
