@@ -75,3 +75,6 @@ wildbeast.db
 
 # Package - backup
 package-backup.json
+
+# Old Node Modules
+node_modules.old
