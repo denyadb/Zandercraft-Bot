@@ -1,19 +1,29 @@
 version: '3'
 services:
-  wildbeast:
+  wildbeast-shard-0:
     image: dougley/wildbeast
     volumes:
       - ./src:/opt/wildbeast/src
       - ./index.js:/opt/wildbeast/index.js
+    environment: 
+      - WILDBEAST_SHARDS_MINE=0
     env_file:
       - .env
     links:
     - arango
     - lavalink
-    depends_on:
-      - arango
-      - lavalink
-      - install
+  wildbeast-shard-1:
+    image: dougley/wildbeast
+    volumes:
+      - ./src:/opt/wildbeast/src
+      - ./index.js:/opt/wildbeast/index.js
+    environment: 
+      - WILDBEAST_SHARDS_MINE=1
+    env_file:
+      - .env
+    links:
+    - arango
+    - lavalink
   arango:
     image: arangodb:3.3.14
     env_file:
