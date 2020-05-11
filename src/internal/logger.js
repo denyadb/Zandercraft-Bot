@@ -76,7 +76,7 @@ module.exports = {
 
 function transform (guild) {
   if (!guild) return
-  let proxy = guild
+  const proxy = guild
   proxy.joinedAt = new Date(guild.joinedAt).toISOString()
   proxy.createdAt = new Date(guild.createdAt).toISOString()
   // why eris gives numbers instead of dates for this i dont even know

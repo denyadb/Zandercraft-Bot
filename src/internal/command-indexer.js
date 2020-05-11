@@ -7,7 +7,7 @@ const misc = [
   'Like what the dev team at TheSharks does? Consider supporting them on Patreon! <https://www.patreon.com/Dougley>'
 ]
 
-let result = {}
+const result = {}
 const aliases = new Map()
 
 for (const cmd in commands) {
@@ -27,7 +27,7 @@ async function helpingHand (user, context, cmd) {
   if (commands[cmd]) {
     const c = commands[cmd]
     const name = Object.getOwnPropertyNames(commands).find(f => commands[f] === c)
-    let result = [
+    const result = [
       `Command name: \`${name}\``,
       `Explanation: \`${c.meta.help}\``,
       '',
@@ -45,7 +45,7 @@ async function helpingHand (user, context, cmd) {
     if (c.meta.nsfw) result.push('**This command is NSFW**')
     if (c.meta.addons) result.push(c.meta.addons)
     if (context.guild) {
-      context.createMessage(`Please check your DMs!`)
+      context.createMessage('Please check your DMs!')
       context = await global.bot.users.get(user).getDMChannel() // reassign context to be a dm channel
     }
     context.createMessage(result.join('\n'))
@@ -68,7 +68,7 @@ async function helpingHand (user, context, cmd) {
       })
     }
     if (context.guild) {
-      context.createMessage(`Please check your DMs!`)
+      context.createMessage('Please check your DMs!')
       context = await global.bot.users.get(user).getDMChannel() // reassign context to be a dm channel
     }
     for (const x in result) {

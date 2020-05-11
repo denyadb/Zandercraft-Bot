@@ -11,8 +11,8 @@ module.exports = {
   },
   fn: (msg, suffix) => {
     msg.mentions = msg.mentions.filter(u => u.id !== msg.channel.guild.shard.client.user.id) // why eris... why
-    let memberPerms = msg.channel.permissionsOf(msg.author.id).json
-    let botPerms = msg.channel.permissionsOf(msg.channel.guild.shard.client.user.id).json
+    const memberPerms = msg.channel.permissionsOf(msg.author.id).json
+    const botPerms = msg.channel.permissionsOf(msg.channel.guild.shard.client.user.id).json
     if (!botPerms.manageMessages) {
       msg.channel.createMessage({
         embed: {
@@ -20,7 +20,7 @@ module.exports = {
         }
       }).catch(() => {})
     } else if (memberPerms.manageMessages) {
-      let splitSuffix = suffix.split(' ')
+      const splitSuffix = suffix.split(' ')
       switch (splitSuffix[0]) {
         case 'author':
           let number
@@ -29,7 +29,7 @@ module.exports = {
           if (number) {
             if (msg.mentions.length === 1) {
               msg.channel.getMessages('500', msg.id).then((messages) => { // no b1nzy pls
-                let deletable = []
+                const deletable = []
                 messages.forEach((message) => {
                   if (new Date(msg.timestamp) - new Date(message.timestamp) < 1209600000 && message.author.id === msg.mentions[0].id && deletable.length < number) {
                     deletable.push(message.id)
@@ -74,7 +74,7 @@ module.exports = {
         default: {
           if (!isNaN(splitSuffix[0]) && splitSuffix[0] < 100) {
             msg.channel.getMessages(splitSuffix[0], msg.id).then((messages) => { // no b1nzy pls
-              let deletable = []
+              const deletable = []
               messages.forEach((message) => {
                 if (new Date(msg.timestamp) - new Date(message.timestamp) < 1209600000 && deletable.length < splitSuffix[0]) {
                   deletable.push(message.id)
