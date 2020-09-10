@@ -1,3 +1,4 @@
+
 <p style="text-align:center;">
 <img src="https://i.imgur.com/Rak0dam.png"></p>
 
@@ -48,6 +49,7 @@ The Zandercraft Bot is a modified version of WildBeast(which was created by the 
   <a href="https://discord.io/zandercraftbot"><img src="https://discordapp.com/api/guilds/413897297626267648/widget.png?style=banner2" alt="Discord server"></a>
 </p>
 
+
 ---
 
-"Discord", "Discord App", and any associated logos are registered trademarks of Hammer & Chisel, inc.
+"Discord", "Discord App", and any associated logos are registered trademarks of Discord, inc.

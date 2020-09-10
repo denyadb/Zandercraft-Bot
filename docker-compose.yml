@@ -1,44 +1,48 @@
 version: '3'
 services:
+  # wildbeast-shard-0:
+  #   image: dougley/wildbeast
+  #   volumes:
+  #     - ./src:/opt/wildbeast/src
+  #     - ./index.js:/opt/wildbeast/index.js
+  #   environment: 
+  #     - WILDBEAST_SHARDS_MINE=0
+  #   env_file:
+  #     - .env
+  #   links:
+  #   - lavalink
+
   wildbeast-shard-0:
-    image: dougley/wildbeast
-    volumes:
-      - ./src:/opt/wildbeast/src
-      - ./index.js:/opt/wildbeast/index.js
-    environment: 
-      - WILDBEAST_SHARDS_MINE=0
+    build:
+      context: .
+      dockerfile: Dockerfile
+    # image: dougley/wildbeast
     env_file:
       - .env
-    links:
-    - arango
-    - lavalink
-  wildbeast-shard-1:
-    image: dougley/wildbeast
-    volumes:
-      - ./src:/opt/wildbeast/src
-      - ./index.js:/opt/wildbeast/index.js
-    environment: 
-      - WILDBEAST_SHARDS_MINE=1
-    env_file:
-      - .env
-    links:
-    - arango
-    - lavalink
-  arango:
-    image: arangodb:3.3.14
-    env_file:
-      - arangodb.env
-  install:
-    restart: 'no'
-    links:
-      - arango
     environment:
-      ARANGO_URI: http://arango:8529
-    image: dougley/wildbeast
+      LAVALINK_NODES: '[{"host":"lavalink", "port": 2333, "password":"youshallnotpass"}]'
+      - WILDBEAST_SHARDS_MINE=0
+    links:
+      - lavalink
     depends_on:
-      - arango
-    command: npm run-script dbcreate
+      - lavalink
+  wildbeast-shard-1:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    # image: dougley/wildbeast
+    env_file:
+      - .env
+    environment:
+      LAVALINK_NODES: '[{"host":"lavalink", "port": 2333, "password":"youshallnotpass"}]'
+      - WILDBEAST_SHARDS_MINE=1
+    links:
+      - lavalink
+    depends_on:
+      - lavalink
   lavalink:
     image: fredboat/lavalink:master
-    env_file:
-      - lavalink.env
+    environment:
+      LAVALINK_SERVER_PASSWORD: youshallnotpass
+      SERVER_PORT: 2333
+      SERVER_HOST: 0.0.0.0
