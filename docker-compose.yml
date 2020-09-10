@@ -21,7 +21,7 @@ services:
       - .env
     environment:
       LAVALINK_NODES: '[{"host":"lavalink", "port": 2333, "password":"youshallnotpass"}]'
-      - WILDBEAST_SHARDS_MINE=0
+      WILDBEAST_SHARDS_MINE: 0
     links:
       - lavalink
     depends_on:
@@ -35,7 +35,7 @@ services:
       - .env
     environment:
       LAVALINK_NODES: '[{"host":"lavalink", "port": 2333, "password":"youshallnotpass"}]'
-      - WILDBEAST_SHARDS_MINE=1
+      WILDBEAST_SHARDS_MINE: 1
     links:
       - lavalink
     depends_on:
