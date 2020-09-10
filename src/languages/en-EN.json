@@ -35,7 +35,7 @@
   "NO_VOICE_CHANNELS": "Sorry bucko, there's no voice channels for me to join.",
   "JOIN_VOICE_CHANNEL": "You must be connected to a voice channel before using this command.",
   "NO_VOICE_CONNECT_PERM": "I don't have permission to connect or speak in {channel}.",
-  "VOICE_NOT_CONNECTED": "I am not connected to any voice channels in this guild. Please use the voice command while in a voice channel to get me to join it.",
+  "VOICE_NOT_CONNECTED": "I am not connected to any voice channels in this guild.",
   "VOICE_DISCONNECT": "Leaving voice channel **{channel}**.",
   "VOICE_CONNECTED": "I am already connected to the **{channel}** voice channel.",
   "NO_SEARCH_SUFFIX": "{user}, enter what you'd like to search for.",

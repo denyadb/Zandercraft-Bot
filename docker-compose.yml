@@ -1,22 +1,10 @@
 version: '3'
 services:
-  # wildbeast-shard-0:
-  #   image: dougley/wildbeast
-  #   volumes:
-  #     - ./src:/opt/wildbeast/src
-  #     - ./index.js:/opt/wildbeast/index.js
-  #   environment: 
-  #     - WILDBEAST_SHARDS_MINE=0
-  #   env_file:
-  #     - .env
-  #   links:
-  #   - lavalink
-
   wildbeast-shard-0:
     build:
       context: .
       dockerfile: Dockerfile
-    # image: dougley/wildbeast
+    # image: dougley/wildbeast:experimental
     env_file:
       - .env
     environment:
@@ -30,7 +18,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    # image: dougley/wildbeast
+    # image: dougley/wildbeast:experimental
     env_file:
       - .env
     environment:

@@ -5,7 +5,7 @@ exec('git remote update').then(gitVerify).catch(async () => {
   logger.warn('VERSION', 'Git commit checking failed, falling back to version checking')
   const SA = require('superagent')
   const local = require('../../package.json').version
-  const stable = await SA.get('https://raw.githubusercontent.com/Zandercraft/Zandercraft-Bot/master/package.json')
+  const stable = await SA.get('https://raw.githubusercontent.com/TheSharks/WildBeast/master/package.json')
   logger.log('VERSION', `Latest version: ${JSON.parse(stable.text).version}`)
   if (local !== JSON.parse(stable.text).version) {
     logger.warn('VERSION', 'Not up-to-date with remote version, update recommended')
